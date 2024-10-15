@@ -1,0 +1,71 @@
+{
+  "name": "react-redux-sample-app",
+  "version": "1.0.0",
+  "description": "React & Redux demo application",
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "homepage": "https://github.com/inker/react-redux-sample-app",
+  "bugs": {
+    "url": "https://github.com/inker/react-redux-sample-app/issues"
+  },
+  "license": "GPLv3",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inker/react-redux-sample-app.git"
+  },
+  "scripts": {
+    "pre-commit": "lint-staged --allow-empty",
+    "lint:js": "eslint --ext .ts,.tsx,.js,.jsx --max-warnings=0 --cache src",
+    "lint:css": "stylelint './src/**/*.{css,postcss,scss}'",
+    "lint": "run-p -c \"lint:css -- {1}\" \"lint:js -- {1}\" --",
+    "prettier": "prettier --cache --check ../../Downloads/frontend-assignment-boilerplate-main",
+    "check-types": "tsc --project tsconfig.json --noEmit",
+    "build": "tsc -b && vite build",
+    "start": "vite",
+    "test": "echo \"No test\""
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.8",
+    "lodash": "^4.17.21",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-redux": "^9.1.2",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@mimica/eslint-config-typescript": "^4.7.0",
+    "@types/lodash": "^4.14.180",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-redux": "^7.1.24",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-sonarjs": "^2.0.3",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "lint-staged": "^15.2.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3",
+    "sass": "^1.79.4",
+    "stylelint": "^16.4.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-order": "^6.0.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.8",
+    "vite-plugin-checker": "^0.8.0",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "imports": {
+    "#*": [
+      "./src/*"
+    ]
+  }
+}
